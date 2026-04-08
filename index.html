@@ -1,0 +1,28 @@
+&#x3c;div class=&#x22;container&#x22;&#x3e;
+  &#x3c;h2&#x3e;Base64 Encoder&#x3c;/h2&#x3e;
+  &#x3c;textarea id=&#x22;input&#x22; placeholder=&#x22;Masukkan teks di sini...&#x22;&#x3e;&#x3c;/textarea&#x3e;
+  
+  &#x3c;div class=&#x22;actions&#x22;&#x3e;
+    &#x3c;button onclick=&#x22;handleEncode()&#x22;&#x3e;Encode&#x3c;/button&#x3e;
+    &#x3c;button onclick=&#x22;handleDecode()&#x22;&#x3e;Decode&#x3c;/button&#x3e;
+  &#x3c;/div&#x3e;
+
+  &#x3c;textarea id=&#x22;output&#x22; readonly placeholder=&#x22;Hasil akan muncul di sini...&#x22;&#x3e;&#x3c;/textarea&#x3e;
+&#x3c;/div&#x3e;
+
+&#x3c;script&#x3e;
+  function handleEncode() {
+    const input = document.getElementById(&#x27;input&#x27;).value;
+    document.getElementById(&#x27;output&#x27;).value = btoa(input);
+  }
+  
+  function handleDecode() {
+    const input = document.getElementById(&#x27;input&#x27;).value;
+    try {
+      document.getElementById(&#x27;output&#x27;).value = atob(input);
+    } catch(e) {
+      alert(&#x22;Format tidak valid untuk Base64!&#x22;);
+    }
+  }
+&#x3c;/script&#x3e;
+
