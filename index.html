@@ -1,27 +1,27 @@
-&lt;div class=&quot;container&quot;&gt;
+&lt;div class="container"&gt;
   &lt;h2&gt;Base64 Encoder&lt;/h2&gt;
-  &lt;textarea id=&quot;input&quot; placeholder=&quot;Masukkan teks di sini...&quot;&gt;&lt;/textarea&gt;
+  &lt;textarea id="input" placeholder="Masukkan teks di sini..."&gt;&lt;/textarea&gt;
   
-  &lt;div class=&quot;actions&quot;&gt;
-    &lt;button onclick=&quot;handleEncode()&quot;&gt;Encode&lt;/button&gt;
-    &lt;button onclick=&quot;handleDecode()&quot;&gt;Decode&lt;/button&gt;
+  &lt;div class="actions"&gt;
+    &lt;button onclick="handleEncode()"&gt;Encode&lt;/button&gt;
+    &lt;button onclick="handleDecode()"&gt;Decode&lt;/button&gt;
   &lt;/div&gt;
 
-  &lt;textarea id=&quot;output&quot; readonly placeholder=&quot;Hasil akan muncul di sini...&quot;&gt;&lt;/textarea&gt;
+  &lt;textarea id="output" readonly placeholder="Hasil akan muncul di sini..."&gt;&lt;/textarea&gt;
 &lt;/div&gt;
 
 &lt;script&gt;
   function handleEncode() {
-    const input = document.getElementById(&apos;input&apos;).value;
-    document.getElementById(&apos;output&apos;).value = btoa(input);
+    const input = document.getElementById('input').value;
+    document.getElementById('output').value = btoa(input);
   }
   
   function handleDecode() {
-    const input = document.getElementById(&apos;input&apos;).value;
+    const input = document.getElementById('input').value;
     try {
-      document.getElementById(&apos;output&apos;).value = atob(input);
+      document.getElementById('output').value = atob(input);
     } catch(e) {
-      alert(&quot;Format tidak valid untuk Base64!&quot;);
+      alert("Format tidak valid untuk Base64!");
     }
   }
 &lt;/script&gt;
