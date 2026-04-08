@@ -1,28 +1,27 @@
-&#x3c;div class=&#x22;container&#x22;&#x3e;
-  &#x3c;h2&#x3e;Base64 Encoder&#x3c;/h2&#x3e;
-  &#x3c;textarea id=&#x22;input&#x22; placeholder=&#x22;Masukkan teks di sini...&#x22;&#x3e;&#x3c;/textarea&#x3e;
+&lt;div class=&quot;container&quot;&gt;
+  &lt;h2&gt;Base64 Encoder&lt;/h2&gt;
+  &lt;textarea id=&quot;input&quot; placeholder=&quot;Masukkan teks di sini...&quot;&gt;&lt;/textarea&gt;
   
-  &#x3c;div class=&#x22;actions&#x22;&#x3e;
-    &#x3c;button onclick=&#x22;handleEncode()&#x22;&#x3e;Encode&#x3c;/button&#x3e;
-    &#x3c;button onclick=&#x22;handleDecode()&#x22;&#x3e;Decode&#x3c;/button&#x3e;
-  &#x3c;/div&#x3e;
+  &lt;div class=&quot;actions&quot;&gt;
+    &lt;button onclick=&quot;handleEncode()&quot;&gt;Encode&lt;/button&gt;
+    &lt;button onclick=&quot;handleDecode()&quot;&gt;Decode&lt;/button&gt;
+  &lt;/div&gt;
 
-  &#x3c;textarea id=&#x22;output&#x22; readonly placeholder=&#x22;Hasil akan muncul di sini...&#x22;&#x3e;&#x3c;/textarea&#x3e;
-&#x3c;/div&#x3e;
+  &lt;textarea id=&quot;output&quot; readonly placeholder=&quot;Hasil akan muncul di sini...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
 
-&#x3c;script&#x3e;
+&lt;script&gt;
   function handleEncode() {
-    const input = document.getElementById(&#x27;input&#x27;).value;
-    document.getElementById(&#x27;output&#x27;).value = btoa(input);
+    const input = document.getElementById(&apos;input&apos;).value;
+    document.getElementById(&apos;output&apos;).value = btoa(input);
   }
   
   function handleDecode() {
-    const input = document.getElementById(&#x27;input&#x27;).value;
+    const input = document.getElementById(&apos;input&apos;).value;
     try {
-      document.getElementById(&#x27;output&#x27;).value = atob(input);
+      document.getElementById(&apos;output&apos;).value = atob(input);
     } catch(e) {
-      alert(&#x22;Format tidak valid untuk Base64!&#x22;);
+      alert(&quot;Format tidak valid untuk Base64!&quot;);
     }
   }
-&#x3c;/script&#x3e;
-
+&lt;/script&gt;
